@@ -32,6 +32,8 @@
 	    <env key="NODE_PATH" value="/tmp/node_modules/" />
             <arg value="--reporter" />
             <arg value="xunit" />
+            <arg value=">" />
+            <arg value="build/testResults/mocha.xml" />
         </exec>
         <echo message="Tests done" />
     </target>
