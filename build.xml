@@ -28,12 +28,10 @@
             <arg value="install" />
         </exec>
         <echo message="Running the tests ..." />
-	<exec executable="mocha" failonerror="true">
+	<exec executable="mocha" output="build/testResults/mocha.xml" failonerror="true">
 	    <env key="NODE_PATH" value="/tmp/node_modules/" />
             <arg value="--reporter" />
             <arg value="xunit" />
-            <arg value=">" />
-            <arg value="build/testResults/mocha.xml" />
         </exec>
         <echo message="Tests done" />
     </target>
